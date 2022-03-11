@@ -1,3 +1,4 @@
+// variables and constants
 const navbarToggler = document.querySelector('.navbar-toggler')
 const cartContainer = document.querySelector('.cart-container')
 const productList = document.querySelector('.product-list')
@@ -25,8 +26,10 @@ function eventListeners() {
         cartContainer.classList.toggle('show-cart-container')
     })
 
+    // add to cart
     productList.addEventListener('click', purchaseProduct)
 
+    // delte from cart
     cartList.addEventListener('click', deleteProduct)
 
 }
@@ -38,8 +41,7 @@ function updateCartInfo() {
     cartTotal.textContent = cartInfo.total
 }
 
-updateCartInfo()
-
+// loading JSON
 function loadJSON() {
     fetch('assets/building.json')
         .then(res => res.json())
@@ -138,6 +140,9 @@ function loadCart() {
         cartItemID++;
     }
     products.forEach(product => addToCartList(product))
+
+    // calculate and update cart UI of cart info
+    updateCartInfo()
 }
 
 // calculate cart info
