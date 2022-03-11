@@ -35,7 +35,8 @@ function eventListeners() {
 // update cart info
 function updateCartInfo() {
     let cartInfo = findCartInfo();
-   
+    cartCount.textContent = cartInfo.productCount
+    cartTotal.textContent = cartInfo.total
 }
 
 updateCartInfo()
