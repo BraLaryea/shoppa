@@ -25,11 +25,10 @@ function eventListeners() {
         cartContainer.classList.toggle('show-cart-container')
     })
 
-    // document.querySelector('.cart-item-del-btn').addEventListener('click', () => {
-    //     cartContainer.classList.toggle('show-cart-container')
-    // })
-
     productList.addEventListener('click', purchaseProduct)
+
+    cartList.addEventListener('click', deleteProduct)
+
 }
 
 // update cart info
@@ -154,4 +153,23 @@ function findCartInfo() {
         total: total.toFixed(2),
         productCount: products.length
     }
+}
+
+// delete product from cart list and localstorage
+function deleteProduct(e) {
+    let cartItem;
+    if (e.target.tagName == 'BUTTON') {
+        cartItem = e.target.parentElement;
+        cartItem.remove(); //this removes form the DOM only
+    }
+    else if (e.target.tagName === 'I') {
+        cartItem = e.target.parentElement.parentElement;
+        cartItem.remove(); //this removes form the DOM only
+    }
+    let products = getProductFromStorage()
+    let updatedProducts = products.filter(product => {
+        return product.id != parseInt(cartItem.dataset.id);
+    })
+    localStorage.setItem('products', JSON.stringify(updatedProducts)) //update localstorage
+    updateCartInfo()
 }
