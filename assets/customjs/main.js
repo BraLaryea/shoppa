@@ -118,6 +118,7 @@ function saveProductInStorage(item) {
     products.push(item);
     localStorage.setItem('products', JSON.stringify(products)
     );
+    updateCartInfo()
 }
 
 // get all the products if any form localstorage
