@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Complex",
+        "category": "Building",
+        "price": "2,000,000.00",
+        "imgSrc": "assets/images/1.jpg"
+    },
+    {
+        "name": "Semi-detached",
+        "category": "Building",
+        "price": "205,000.00",
+        "imgSrc": "assets/images/4.png"
+    },
+    {
+        "name": "Brickhouse",
+        "category": "Building",
+        "price": "500,000.00",
+        "imgSrc": "assets/images/3.jpg"
+    },
+    {
+        "name": "Skyscrapper",
+        "category": "Building",
+        "price": "900,000.00",
+        "imgSrc": "assets/images/5.jpg"
+    },
+    {
+        "name": "Condo",
+        "category": "Building",
+        "price": "300,000.00",
+        "imgSrc": "assets/images/6.png"
+    },
+    {
+        "name": "20 Storey",
+        "category": "Building",
+        "price": "850,000.00",
+        "imgSrc": "assets/images/9.jpg"
+    },
+    {
+        "name": "Condo",
+        "category": "Building",
+        "price": "990,000.00",
+        "imgSrc": "assets/images/10.jpg"
+    }
+]
